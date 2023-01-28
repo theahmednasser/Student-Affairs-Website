@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{%  static 'add.css' %}">
+    <link rel="stylesheet" href="{%  static 'Nav_bar.css' %}">
+    <title>Add students</title>
+    <!--CSS code || Sign up and Log in form-->
+    <style></style>
+    <!--The end of the CSS code-->
+  </head>
+  <!--HTML Code-->
+  <body>
+    <nav>
+      <div class="heading">
+        <a style="text-decoration: none; color:black" href="/home"><h4>FCAI Affairs</h4></a>
+      </div>
+      <ul class="links">
+        <li><a class="hyperlinks" href="/home">Home</a></li>
+        <li>
+          <a class="active hyperlinks" href="#"
+            >New Student</a
+          >
+        </li>
+        <li><a class="hyperlinks" href="/Edit">Edit</a></li>
+        <li>
+          <a class="hyperlinks" href="/ViewAll">View All</a>
+        </li>
+        <li><a class="hyperlinks" href="/search">Search</a></li>
+      </ul>
+    </nav>
+    <div id="backgroud">
+      <div id="container">
+        <button id="signupbtn" onclick="first()">ِADD STUDENT</button>
+        <form method="post" action="{% url 'add' %}">
+          {% csrf_token %}
+          <!--Login form-->
+          <!--Signup form-->
+          <div id="secondform">
+            <div class="part1">
+              <div class="third">
+                <input
+                  class="input"
+                  name="name"
+                  type="text"
+                  placeholder="Student name"
+                  required
+                />
+              </div>
+              <div class="third">
+                <input
+                  class="input"
+                  name="student_id"
+                  type="text"
+                  placeholder="Student ID"
+                  maxlength="8"
+                  required
+                />
+              </div>
+              <div class="third">
+                <input
+                  class="input"
+                  name="mobile"
+                  type="text"
+                  placeholder="mobile_number"
+                  maxlength="11"
+                  required
+                />
+              </div>
+              <div class="third">
+                <input
+                  class="input"
+                  name="email"
+                  type="text"
+                  placeholder="Email"
+                  required
+                />
+              </div>
+              <div class="third">
+                <input
+                  class="input"
+                  name="date_of_birth"
+                  type="date"
+                  placeholder="date_of_birth"
+                />
+              </div>
+              <div class="third">
+                <input
+                  class="input"
+                  name="gpa"
+                  type="number"
+                  placeholder="GPA"
+                  required
+                  min="0"
+                  max="4"
+                  step="0.1"
+                />
+              </div>
+            </div>
+            <div class="part2">
+              <div class="third">
+                <input
+                  class="input"
+                  name="level"
+                  type="number"
+                  placeholder="Level"
+                  required
+                  max="4"
+                  min="0"
+                />
+              </div>
+              <div class="third">
+                <input
+                  class="input"
+                  name="address"
+                  type="text"
+                  placeholder="Address"
+                  required
+                />
+              </div>
+              <div class="third">
+                <input class="input" name="gender" placeholder="Gender">
+              </div>
+              <div class="third">
+                <input class="input" name="status" placeholder="Status">
+              </div>
+              <div class="third">
+                <input class="input" name="Department" placeholder="Department">
+                </input>
+              </div>
+            </div>
+          </div>
+          <button type="submit" id="signup">Add student</button>
+          <!--Signup form-->
+        </form>
+      </div>
+    </div>
+    <!--The end of HTML-->
+    <!--The end of Signup / Login form-->
+    <!--JS code-->
+
+    <!--The end of the JS code-->
+    <script src="{%  static 'add.js' %}"></script>
+  </body>
+</html>

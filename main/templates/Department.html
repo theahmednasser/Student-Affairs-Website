@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{%  static 'Department.css' %}">
+    <link rel="stylesheet" href="{%  static 'Nav_bar.css' %}">
+    <title>Add students</title>
+    <!--CSS code || Sign up and Log in form-->
+    <style></style>
+    <!--The end of the CSS code-->
+  </head>
+  <!--HTML Code-->
+  <body>
+    <nav>
+      <div class="heading">
+        <a style="text-decoration: none; color:black" href="/home"><h4>FCAI Affairs</h4></a>
+      </div>
+      <ul class="links">
+        <li><a class="hyperlinks" href="../Home/Home.html">Home</a></li>
+        <li>
+          <a class="hyperlinks" href="../Add Student/add.html">New Student</a>
+        </li>
+        <li><a class="hyperlinks" href="../Edit Student/Edit.html">Edit</a></li>
+        <li>
+          <a class="hyperlinks" href="../View All/ViewAll.html">View All</a>
+        </li>
+        <li><a class="hyperlinks" href="../Search/Search.html">Search</a></li>
+      </ul>
+    </nav>
+    <div id="backgroud">
+      <div id="container">
+        <button id="signupbtn" onclick="first()">ِDepartment Page</button>
+        <form id="form" method="post">
+          <!--Login form-->
+          <!--Signup form-->
+          <div id="secondform">
+            <div class="part1">
+              <div class="third">
+                <input
+                  class="input"
+                  name="Student name"
+                  type="text"
+                  placeholder="Student name"
+                  value="shahd"
+                  disabled
+                  required
+                />
+              </div>
+              <div class="third">
+                <input
+                  class="input"
+                  name="ID"
+                  type="text"
+                  placeholder="Student ID"
+                  maxlength="8"
+                  value="20200260"
+                  disabled
+                  required
+                />
+              </div>
+              <div class="third dep">
+                <select class="input">
+                  <option>Department</option>
+                  <option name="Department" value="CS">Computer Science</option>
+                  <option name="Department" value="IS">
+                    Information System
+                  </option>
+                  <option name="Department" value="IT">
+                    Information Technology
+                  </option>
+                  <option name="Department" value="AI">
+                    Artificial Intellegence
+                  </option>
+                  <option name="Department" value="DS">Decision Support</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <button id="sub">submit</button>
+          <!--Signup form-->
+        </form>
+      </div>
+    </div>
+    <!--The end of HTML-->
+    <!--The end of Signup / Login form-->
+    <!--JS code-->
+
+    <!--The end of the JS code-->
+  </body>
+</html>

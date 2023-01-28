@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="stylesheet" href="{%  static 'View.css' %}" />
+  <link rel="stylesheet" href="{%  static 'Nav_bar.css' %}" />
+  <head>
+    <!--Table Css-->
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student List</title>
+  </head>
+  <body>
+    <nav>
+      <div class="heading">
+        <a style="text-decoration: none; color: black" href="/home"
+          ><h4>FCAI Affairs</h4></a
+        >
+      </div>
+      <ul class="links">
+        <li><a class="hyperlinks" href="/home">Home</a></li>
+        <li>
+          <a class="hyperlinks" href="/add">New Student</a>
+        </li>
+        <li><a class="hyperlinks" href="/Edit">Edit</a></li>
+        <li>
+          <a class="active hyperlinks" href="#">View All</a>
+        </li>
+        <li>
+          <a class="hyperlinks" href="/search">Search</a>
+        </li>
+      </ul>
+    </nav>
+    <h2>List of Students</h2>
+
+    <table id="table">
+      <!--Table Header-->
+      <thead>
+        <tr id="header">
+          <th>Name</th>
+          <th>ID</th>
+          <th>Date of birth</th>
+          <th>GPA</th>
+          <th>Gender</th>
+          <th>Level</th>
+          <th>Status</th>
+          <th>Department</th>
+          <th>Email</th>
+          <th>Mobile Number</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!--Row number 1-->
+        {% for result in students %}
+        <tr>
+          <td>{{ result.name }}</td>
+          <td>{{ result.id }}</td>
+          <td>{{ result.Date }}</td>
+          <td>{{ result.GPA }}</td>
+          <td>{{ result.Gender }}</td>
+          <td>{{ result.level }}</td>
+          <td>{{ result.Status }}</td>
+          <td>{{ result.department }}</td>
+          <td>{{ result.email }}</td>
+          <td>{{ result.mobile_number }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <script>
+      ChangeRowColor(newColor);
+      {
+        var color = newColor.value;
+        document.getElementsByClassName("class");
+      }
+    </script>
+  </body>
+</html>

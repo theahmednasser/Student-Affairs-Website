@@ -1,0 +1,109 @@
+        *
+        {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        body
+        {
+            background-image: url(rrr.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #container
+        {
+            width: 750px;
+            height: 570px;
+            background-color: rgba(61, 71, 71, 0.705);
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+            box-shadow: 0px 5px 30px black;
+        }
+        .input
+        {
+            background-color: #DCDADD;
+            border: none;
+            width: 280px;
+            padding: 10px;
+            margin-bottom: 15px;
+            margin-top: 10px;
+            background-color: transparent;
+            border-bottom: 2px solid white; 
+            color: white;           
+        } 
+        .input:focus
+        {
+            outline: none;
+            border-bottom: 2px solid #5291de;
+            font-size: 17px;
+        }
+
+        #second
+        {
+            padding-left: 30px;
+            margin-top: -25px;
+        }
+
+        #signupbtn
+        {
+            background-color: transparent;
+            color: white;
+            border: none;
+            font-size: 18px;
+            font-weight: 550px;
+            border-bottom: 2px solid #5291de;
+            margin: 50px 0px 5px 30px;
+            cursor: pointer;
+        }
+
+        
+
+        a:hover
+        {
+            text-decoration: underline;
+        }
+
+        ::placeholder
+        {
+            color: white;
+        }
+        .third
+        {
+            margin: 20px;
+        }
+        #signup
+        {
+            width: 120px;
+            height: 40px;
+            margin-left: 40%;
+            background-color: #5291de;
+            border-radius: 40px;
+            border: none;
+            font-size: 100%;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        #signup:hover
+        {
+            background-color: #5291de;
+            transition: ease-in-out;
+        }
+        #done
+        {
+            cursor: pointer;
+        }
+        #secondform
+        {
+            display: flex;
+            justify-content: space-between;
+        }
+        option
+        {
+            color: #000000;
+        }
+
+        
